@@ -1,0 +1,15 @@
+                                DIFFERENCE BETWEEN UNDEFINED AND NULL
+
+Undefined - means a variable has been declared but the value has not yet 
+                         Defined
+                       
+                     For example; var test;
+                                               Console.log (test);
+                                                 // undefined
+
+
+Null – is an assignment value.it can be assigned to a variable as representation of 
+           No value
+             For example; var test=null
+                                       Console.log (test);
+                                       \\ null

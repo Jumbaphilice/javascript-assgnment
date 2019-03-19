@@ -1,0 +1,19 @@
+Meaning of declaration, definition and initialization
+Initialization:  is when we put a value in a variable, this happens while we declare a variable;
+ for example
+                                     Int x = 7;
+                                    String Myname =”Mercy”;
+
+Declaration: declaration is when we declare variable with name
+                      : Variable can only be declared once; for example 
+                                      Int x;
+                                       String myname;
+Definition:  function definition consists of function keyword  
+                     Followed by name of the function, list of parameters
+                      Enclosed in parenthesis and separated commas and 
+                      JavaScript statements that define the function;
+                          Example;
+                           function square (number) {
+                              return number * number
+                            }
+         
