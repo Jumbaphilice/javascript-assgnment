@@ -1,0 +1,16 @@
+
+write a function that prints all the fruits from a given list of fruits e.g.printFruits(fruits_list)
+
+fruits_list=["mangoes","pineapples","oranges","bananas","melons"];
+function printFruits(fruits_list) {
+console.log(fruits_list);
+}
+printFruits(fruits_list)
+
+writea function that given a fruit index, it returns the name of a fruit from a list of fruits.e.g getFruit(1,fruits_list),returns'apples'
+
+var fruit_index=prompt("pick any number from 0-4 and you will get a fruit in return");
+function getFruit(fruits_list,fruit_index) {
+console.log(fruits_list[fruit_index]);
+}
+getFruit(fruits_list,fruit_index)
