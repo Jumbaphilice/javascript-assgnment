@@ -25,3 +25,21 @@ For example, calculateFruitCost('orange', 2) should return "2 Oranges for KES 60
   calculateFruitsCost("mangoes",2)
   "2 mangoes for KES 60"
 
+correction
+function calculateFruitCost(fruitName,quantity)
+
+var fruits={"banana":10,"melon":20,"apple":30};
+
+var price=fruits[fruitName]*quantity;
+return quantity +" " + fruitName + " " + "for KES" + price;
+}
+
+undefined
+
+calculateFruitCost("banana",2)
+
+"2 banana for KES20"
+
+calculateFruitCost("melon",2)
+
+"2 melon for KES40
