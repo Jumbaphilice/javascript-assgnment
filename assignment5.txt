@@ -31,6 +31,7 @@ return "E"
  }	
 
 else{
+
 return "F"
 }
 
@@ -47,6 +48,7 @@ getGrade(marks) returns "A"
 
 		getGrade(76)
 
+
 		"B"
 
 		getGrade(62)
@@ -60,3 +62,75 @@ getGrade(marks) returns "A"
 		getGrade(49)
 
 		"F"
+
+
+
+
+
+
+
+if(marks >=80 & marks<=100 ){
+return "A"
+ }
+
+
+else if(marks >=70 & marks<=79){	
+return "B"
+ }
+
+else if(marks >=60 & marks<=69){
+	
+return "C"
+ }
+
+else if(marks >=50 & marks<=59){
+	
+return "D"
+ }
+
+else if(marks>=0 & marks<=40){
+
+return "E"
+ }	
+
+else{
+
+return "F"
+}
+
+
+function getGrade(marks){
+  var result;
+  var score =parseInt(  marks / 10);
+  switch (score){
+    case 10:
+    case 9:
+    case 8:
+      result="A";
+      break;
+    case 7:
+      result="B";
+      break;
+    case 6:
+      result="C";
+      break;
+    case 5:
+      result="D"
+      break;
+    case 4:
+    case 3:
+    case 2:
+    case 1:
+    case 0:
+      result ="E";
+      break;
+    default:
+      result = "F"
+   }
+
+  return result
+}
+
+var mymarks=undefined;
+var response = getGrade(mymarks)
+console.log(response);
