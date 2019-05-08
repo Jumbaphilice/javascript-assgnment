@@ -1,0 +1,21 @@
+
+let user={
+   name :"mercy muhonja",
+   years:20,
+  
+ };
+
+ let {name,years,isstudent"string}=user;
+ console.log(name);
+ console.log(years);
+ console.log(isstudent);
+
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+ask(
+  "Do you agree?",
+  () => alert("You agreed."),
+   () => alert("You canceled the execution.")
+);
