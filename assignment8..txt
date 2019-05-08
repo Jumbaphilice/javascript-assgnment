@@ -5,7 +5,7 @@ let user={
   
  };
 
- let {name,years,isstudent"string}=user;
+ let {name,years,isstudent"false"}=user;
  console.log(name);
  console.log(years);
  console.log(isstudent);
