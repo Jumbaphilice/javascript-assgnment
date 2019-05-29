@@ -1,0 +1,147 @@
+class MumMboga {
+  
+  constructor() {
+    this.products = [];
+    this.carts = [];
+    this.orders = [];
+    this.customers  = [];
+  }
+
+  addProduct(productId,name,price,quantity){
+    let product={
+      id:productId,
+      name:name,
+      price:price,
+      quantity:quantity
+    }
+    
+    this.products.push(product)
+    
+  }
+  getProduct(productId){
+    for(var i=0;i<this.products.length; i++){
+      let product=this.products[i]
+      if(product.id===productId){
+        return product
+      }
+    }
+    
+  }
+ removeProduct(productId){
+   let product=this.getProduct(productId)
+   let index=this.products.indexOf(product)
+   this.products.splice(index,1)
+ }
+ updateProduct(productId, name, price, quantity){
+    let product ={productId:productId,
+    name:name,
+    price:price,
+    quantity:quantity
+    }
+    this.products.push(product);
+  }
+  
+  addToCart(cartId,product,orderQuantity,customerId){
+    let item ={
+    cartId:cartId,
+    product:product,
+    orderQuantity:orderQuantity,
+    customerId:customerId
+    }
+  this.carts.push(item);
+  }
+  
+  getFromCart(productId){
+   for(var i=0;i<this.carts.length;i++){
+     let item = this.carts[i];
+      if (item.productId===productId);
+      {
+        return item;
+      }
+    } 
+ }
+
+createOrder(orderId,cartId){
+    let order={
+      orderId:orderId,
+      cartId:cartId,}
+    this.orders.push(order);
+   }
+ }
+    
+    
+  
+ 
+
+    
+var mumMboga=new MumMboga()
+mumMboga.addProduct(1,"Tomatoes",20,5)
+mumMboga.addProduct(1,"cabbage",30,20)
+// console.log(mumMboga.products)
+// mumMboga.getProduct(1)
+// console.log(mumMboga.products)
+// mumMboga.removeProduct(1)
+// console.log(mumMboga.products)--
+mumMboga.updateProduct(1,"kales",300,50)
+console.log(mumMboga.products)
+var spinach= new MumMboga();
+spinach.addToCart(30,"spinach",300,3792);
+console.log(spinach.carts);
+spinach.getFromCart(1)
+console.log(spinach.cart)
+
+
+
+
+
+
+
+
+
+
+
+[[object Object] {
+  id: 1,
+  name: "Tomatoes",
+  price: 20,
+  quantity: 5
+}, [object Object] {
+  id: 1,
+  name: "cabbage",
+  price: 30,
+  quantity: 20
+}, [object Object] {
+  name: "kales",
+  price: 300,
+  productId: 1,
+  quantity: 50
+}]
+[[object Object] {
+  cartId: 30,
+  customerId: 3792,
+  orderQuantity: 300,
+  product: "spinach"
+}]
+[[object Object] {
+  id: 1,
+  name: "Tomatoes",
+  price: 20,
+  quantity: 5
+}, [object Object] {
+  id: 1,
+  name: "cabbage",
+  price: 30,
+  quantity: 20
+}, [object Object] {
+  name: "kales",
+  price: 300,
+  productId: 1,
+  quantity: 50
+}]
+[[object Object] {
+  cartId: 30,
+  customerId: 3792,
+  orderQuantity: 300,
+  product: "spinach"
+}]
+undefined
