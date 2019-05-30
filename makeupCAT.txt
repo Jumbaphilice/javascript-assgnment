@@ -1,0 +1,257 @@
+class Mkulima {
+  
+  constructor() {
+    this.farms = [];
+    this.vendors = [];
+    this.products = [];
+    this.orders = [];
+  }
+
+ addFarm(farmId,name,farmer,phone,address){
+    let farm ={
+    farmId:farmId,
+    name:name,
+    farmer:farmer,
+    address:address,
+    
+    }
+  this.farms.push(farm);
+  }
+  
+  getFarm(farmId){
+   for(var i=0;i<this.farms.length;i++){
+     let farm = this.farms[i];
+      if (farm.id===farmId);{
+        return farm;
+      }
+    } 
+  
+ }
+  removeFarm(farmId){
+    let farm=this.getFarm(farmId)
+    let index=this.farms.indexOf(farmId)
+    this.farms.splice(index,2)
+  }
+ updateFarm(farmId,name,farmer,phone,address){
+    let farm ={
+    farmId:farmId,
+    name:name,
+    phone:phone,
+    address:address,
+    }
+    this.farms.push(farm);
+  }
+ addVendor(vendorId,name,phone,){
+    let vendor ={
+    vendorId:vendorId,
+    name:name,
+    phone:phone,
+    
+    }
+  this.vendors.push(vendor);
+  }
+  
+  getVendor(vendorId){
+   for(var i=0;i<this.vendors.length;i++){
+     let vendor = this.vendors[i];
+      if (vendor.id===vendorId);{
+        return vendor;
+      }
+    } 
+  
+ }
+ removeVendor(vendorId){
+    let vendor=this.getVendor(vendorId)
+    let index=this.vendors.indexOf(vendorId)
+    this.vendors.splice(index,1)
+  }
+  
+  updateVendor(vendorId,name,phone){
+    let vendor ={
+    vendorId:vendorId,
+    name:name,
+    phone:phone,
+    }
+    this.vendors.push(vendor);
+  }
+  addProduct(productId,name,price){
+    let product ={
+    productId:productId,
+    name:name,
+    price:price,
+    
+    }
+   this.products.push(product);
+    
+  }
+  
+   getProduct(productId){
+   for(var i=0;i<this.products.length;i++){
+     let product = this.products[i];
+      if (product.id===productId);{
+        return product;
+      }
+    } 
+  
+ }
+  removeProduct(productId){
+    let product=this.getProduct(productId)
+    let index=this.products.indexOf(productId)
+    this.products.splice(index,1)
+  }
+  updateProduct(productId,name,price){
+    let product ={
+    productId:productId,
+    name:name,
+    price:price,
+    }
+    this.products.push(product);
+  }
+  
+  }
+  
+
+
+
+ 
+
+
+
+  
+
+ 
+var mkulima=new Mkulima()
+ mkulima.addFarm(1026,"mercy",10,"0797890154","mercymuhonja@gmail.com")
+ mkulima.addFarm(5060,"vincent",11,"0789600154","vincentmmene@gmail.com")
+ console.log(mkulima.farms)
+ mkulima.removeFarm(2)
+ console.log(mkulima.farms)
+ mkulima.updateFarm(1030,"jane",11,"0723605011","janemakungu@gmail.com")
+ console.log(mkulima.farms)
+ mkulima.getFarm(2)
+ console.log(mkulima.farms)
+ mkulima.addVendor(4650,"philice","0797801551")
+ mkulima.addVendor(4670,"brian","0798601571")
+ console.log(mkulima.vendors)
+ mkulima.removeVendor(2)
+ console.log(mkulima.vendors)
+ mkulima.updateVendor(7890,"Edith","078902455")
+ console.log(mkulima.vendors)
+ mkulima.getVendor()
+ console.log(mkulima.vendors)
+ mkulima.addProduct(201,"cabbage",30)
+ mkulima.addProduct(789,"watermelons",60)
+ console.log(mkulima.products)
+ mkulima.removeProduct(2)
+ console.log(mkulima.products)
+ mkulima.updateProduct(100,"kales",100)
+ console.log(mkulima.products)
+ mkulima.getProduct()
+ console.log(mkulima.products)
+ [[object Object] {
+  address: "mercymuhonja@gmail.com",
+  farmer: 10,
+  farmId: 1026,
+  name: "mercy"
+}, [object Object] {
+  address: "vincentmmene@gmail.com",
+  farmer: 11,
+  farmId: 5060,
+  name: "vincent"
+}]
+[[object Object] {
+  address: "mercymuhonja@gmail.com",
+  farmer: 10,
+  farmId: 1026,
+  name: "mercy"
+}]
+[[object Object] {
+  address: "mercymuhonja@gmail.com",
+  farmer: 10,
+  farmId: 1026,
+  name: "mercy"
+}, [object Object] {
+  address: "janemakungu@gmail.com",
+  farmId: 1030,
+  name: "jane",
+  phone: "0723605011"
+}]
+[[object Object] {
+  address: "mercymuhonja@gmail.com",
+  farmer: 10,
+  farmId: 1026,
+  name: "mercy"
+}, [object Object] {
+  address: "janemakungu@gmail.com",
+  farmId: 1030,
+  name: "jane",
+  phone: "0723605011"
+}]
+[[object Object] {
+  name: "philice",
+  phone: "0797801551",
+  vendorId: 4650
+}, [object Object] {
+  name: "brian",
+  phone: "0798601571",
+  vendorId: 4670
+}]
+[[object Object] {
+  name: "philice",
+  phone: "0797801551",
+  vendorId: 4650
+}]
+[[object Object] {
+  name: "philice",
+  phone: "0797801551",
+  vendorId: 4650
+}, [object Object] {
+  name: "Edith",
+  phone: "078902455",
+  vendorId: 7890
+}]
+[[object Object] {
+  name: "philice",
+  phone: "0797801551",
+  vendorId: 4650
+}, [object Object] {
+  name: "Edith",
+  phone: "078902455",
+  vendorId: 7890
+}]
+[[object Object] {
+  name: "cabbage",
+  price: 30,
+  productId: 201
+}, [object Object] {
+  name: "watermelons",
+  price: 60,
+  productId: 789
+}]
+[[object Object] {
+  name: "cabbage",
+  price: 30,
+  productId: 201
+}]
+[[object Object] {
+  name: "cabbage",
+  price: 30,
+  productId: 201
+}, [object Object] {
+  name: "kales",
+  price: 100,
+  productId: 100
+}]
+[[object Object] {
+  name: "cabbage",
+  price: 30,
+  productId: 201
+}, [object Object] {
+  name: "kales",
+  price: 100,
+  productId: 100
+}]
+
+
+
+
