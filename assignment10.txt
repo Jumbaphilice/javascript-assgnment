@@ -1,0 +1,24 @@
+var body =document.body
+body.style.backgroundColor="silver"
+document.getElementById("title").style.color="green"
+var body=document.body
+
+var h3 =document.getElementsByTagName("h3")
+body.style.textTransform="uppercase"
+
+ var fruits = document.createElement("FruitList");
+  btn.innerHTML = "oranges";
+  document.body.appendChild(fruits);
+
+var fruits=document.createElement("fruilist")
+list.innerHTML="Sweet melon"
+var ul=document.getElementById("fruitList")
+ul.appendChild(fruits)
+
+var vegetable =document.createElement("list")
+list2.innerHTML="cabbage"
+var ul=document.getElementById("vegetableList")
+ul.appendChild(list2)
+
+
+
